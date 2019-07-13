@@ -1,0 +1,11 @@
+<p>Post page</p>
+
+<%= link_to "New post", posts_new_path %>
+
+<% @posts.each do |p| %>
+    <p>
+        [<%= p.id %>] <%= p.title %> 
+    </p>
+
+    <p> <%= p.body %></p>                                   
+<% end %>
