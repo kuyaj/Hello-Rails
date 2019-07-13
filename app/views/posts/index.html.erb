@@ -1,11 +1,29 @@
-<p>Post page</p>
+<html>
+    <body>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+      <div class="container">
+          <p>Post page</p>
 
-<%= link_to "New post", posts_new_path %>
+<%= link_to "New post", posts_new_path %> 
 
-<% @posts.each do |p| %>
-    <p>
-        [<%= p.id %>] <%= p.title %> 
-    </p>
+<% @posts.each do |post| %>
+   <div class="card">
+    <div class="card-content "> 
+         <span class="card-title"> 
+          <%= post.id %> - <%= post.title %> 
+        </span>
 
-    <p> <%= p.body %></p>                                   
+    <p> <%= post.body %></p>   
+      <%=  link_to "Show", post %>
+      <%= link_to "Edit", edit_post_url(post)%>
+      <%= link_to "Destroy", delete_post_path(post),
+      method: :delete, data: {
+          confirm: "Are you sure want to delete this"
+      }
+      %>
+      </div>
+    </div>                               
 <% end %>
+      </div>
+    </body>
+</html>

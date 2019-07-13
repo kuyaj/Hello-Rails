@@ -1,0 +1,11 @@
+<h1> Showing Posts <h1>
+
+
+<h3> <%= @post.title %> </h3>
+<p><%= @post.body %></p>
+
+<%= link_to "All post", posts_path %>
+   <%= link_to "Edit", edit_post_url(@post) %>
+ <%= link_to "Destroy", delete_post_path(@post), 
+ method: :delete
+ %>
