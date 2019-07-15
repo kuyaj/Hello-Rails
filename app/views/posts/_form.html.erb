@@ -1,11 +1,9 @@
 
-
- <%= simple_form_for(@post) do |f| %>
+<%= simple_form_for(@post) do |f| %>
 
         <%= f.input :title %>
-      <div class="input-field col s12"> 
+ 
           <%= f.input :body %>
-      </div>
-        <%= f.submit %> 
-     
-    <% end %>
+
+         <%= f.submit :class => "btn btn-small #e53935 red darken-1" %> 
+<% end %>
