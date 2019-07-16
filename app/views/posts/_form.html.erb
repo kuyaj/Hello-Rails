@@ -1,9 +1,9 @@
 
-<%= simple_form_for(@post) do |f| %>
 
-        <%= f.input :title %>
- 
-          <%= f.input :body %>
+  <%= simple_form_for(@post) do |f| %>
+    <div> <%= f.input :title %></div>
+    <div> <%= f.input :body %></div>
+  <%= f.submit :class => "submit" %> 
+  <% end %>
+<% link_to "Go Back", posts_path %>
 
-         <%= f.submit :class => "btn btn-small #e53935 red darken-1" %> 
-<% end %>

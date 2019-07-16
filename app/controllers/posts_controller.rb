@@ -17,7 +17,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
+    if @post.save  
       redirect_to @post, notice: "You created a post!"
     else 
       render :new, alert: "Your post wasn't created."
