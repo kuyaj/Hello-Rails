@@ -1,14 +1,14 @@
 
 
-    <div class="ui text container">
-         
+ <div class="ui text container">
          <div class="box">
           <h3> <%= @post.title %> </h3>
           <p><%= @post.body %></p>
-         </div>
-          <%= link_to "All post", posts_path %>
-            <%= link_to "Edit", edit_post_url(@post) %>
+
+          <%= link_to "Edit", edit_post_url(@post) %>
           <%= link_to "Destroy", delete_post_path(@post), 
             method: :delete
-          %>
+          %>  
+          
+         </div>   
     </div>

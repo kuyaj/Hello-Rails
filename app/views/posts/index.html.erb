@@ -1,7 +1,6 @@
 
 <div class="ui text container">
-  <br>
-  <%= link_to "New post", posts_new_path %> 
+ 
   <% @posts.each do |post| %>
    <div class="box">
     <h4> <%= post.title %> </h4> 
